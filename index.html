@@ -1,0 +1,118 @@
+<html>
+<head>
+        <title>Kosmic3D's Official Website</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body">
+    <audio id="audioPlayer" controls loop>
+        <source src="media/site_song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div>
+        <button id="playButton">Play Music</button>
+        <center><img src="media/zstar.gif" width="64" height="64" style="margin-right:40px; margin-bottom: 20px;"><img id="image" src="media/kosmic3d_logo.png"/><img src="media/zstar.gif" width="64" height="64" style="margin-left:40px; margin-bottom: 20px;"></center>
+    </div>
+    <hr>
+    <center>
+        <font face="arial" size="6">
+        Welcome to the <b>Kosmic3D</b> Official Website
+        </font>
+    </center>
+    <center>
+        <font face="arial" size="5">
+            <b>The game engine from the 90's</b>
+        </font>
+    </center>
+    <div style="margin-top:2em;">
+        <center>
+            <table width="350" border="0">
+                <tbody>
+                    <tr>
+                        <td width="44" align="center">
+                            <a href="about.html">
+                                <img src="media/about.png" width="40" height="40" align="middle">
+                            </a>
+                        </td>
+                        <td width="440" align="left">
+                            <a href="about.html">
+                                <font face="arial" size="4">About</font>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="44" align="center">
+                            <a href="news.html">
+                                <img src="media/news.png" width="40" height="40" align="middle">
+                            </a>
+                        </td>
+                        <td width="440" align="left">
+                            <a href="news.html">
+                                <font face="arial" size="4">News</font>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="44" align="center">
+                            <a href="screenshots.html">
+                                <img src="media/screenshot.png" width="40" height="40" align="middle">
+                            </a>
+                        </td>
+                        <td width="440" align="left">
+                            <a href="screenshots.html">
+                                <font face="arial" size="4">Screenshots</font>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="44" align="center">
+                            <a href="demos.html">
+                                <img src="media/tech.png" width="40" height="40" align="middle">
+                            </a>
+                        </td>
+                        <td width="440" align="left">
+                            <a href="demos.html">
+                                <font face="arial" size="4">Tech Demos</font>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="44" align="center">
+                            <a>
+                                <img src="media/games.png" width="40" height="40" align="middle">
+                            </a>
+                        </td>
+                        <td width="440" align="left">
+                            <font face="arial" size="4">Games & Engine (Coming Soon)</font>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+    <div style="margin-top:2em;"></div>
+    <hr>
+    <center><script type="text/javascript" src="//counter.websiteout.net/js/22/0/0/1"></script></center>
+        <div>
+            <center><font color="white">© 2021-2023 Bernard (Lebert) | <a href="credits.html">Credits</a></font></center>
+            
+            <center><a href="https://www.patreon.com/lebert130">Support me on Patreon</a></center>
+        </div>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const imageElement = document.getElementById('image');
+
+        playButton.addEventListener('click', async () => {
+        try {
+            await audioPlayer.play();
+            playButton.classList.add('hidden');
+            imageElement.style.marginTop = '0px';
+        } catch (error) {
+            console.error('Error playing audio:', error);
+        }
+        });
+
+        audioPlayer.controls = false;
+    </script>
+</body>
+</html>
