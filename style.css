@@ -1,5 +1,8 @@
 body {
     background-image: url('media/sky.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 .visible {
